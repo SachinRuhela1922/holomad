@@ -15,7 +15,7 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/login', { username, password });
+            const response = await axios.post('https://holomad-api.vercel.app/login', { username, password });
 
             console.log(response);  // Log the entire response to check the token
 

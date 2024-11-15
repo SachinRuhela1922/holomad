@@ -1,0 +1,16 @@
+.body {
+    /* Make the background image responsive */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Make sure the container takes full viewport size */
+    height: 100vh;
+    width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        background-size: contain; /* On smaller screens, fit the image inside without cutting */
+    }
+}

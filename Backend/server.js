@@ -8,14 +8,15 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = 5000;
+const corsOptions = {
+  origin: 'https://holomad-frontend.vercel.app', // Your frontend URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // If you're using cookies or authentication
+  optionsSuccessStatus: 204,
+};
 
-app.use(cors(
-    {
-        origin:{"https://holomad-frontend.vercel.app"},
-        methods:{"POST","GET"},
-        credentials:true
-    }
-));
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 const uri = process.env.MONGO_URI || "mongodb+srv://pratapruhela1922:qwerty1922roundsround@demotour.6duqb.mongodb.net/DemoTour?retryWrites=true&w=majority";

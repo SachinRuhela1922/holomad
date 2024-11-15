@@ -15,7 +15,7 @@ function Signup() {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/signup', { username, password });
+            const response = await axios.post('holomad-api.vercel.app/signup', { username, password });
             if (response.status === 201) {
                 
                 navigate('/'); // Redirect to the login page after signup

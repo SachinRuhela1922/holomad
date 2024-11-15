@@ -19,7 +19,7 @@ const Appointment = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/appointments', formData);
+            const response = await axios.post('https://holomad-api.vercel.app/api/appointments', formData);
             console.log('Appointment submitted:', response.data);
             // Optionally reset form
             setFormData({ name: '', email: '', appointmentDate: '', docname:'' });

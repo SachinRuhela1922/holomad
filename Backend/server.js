@@ -11,7 +11,7 @@ const port = 5000;
 
 app.use(cors(
     {
-        origin:{"https://holomad-api.vercel.app"},
+        origin:{""},
         methods:{"POST","GET"},
         credentials:true
     }

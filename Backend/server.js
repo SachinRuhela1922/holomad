@@ -9,7 +9,13 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = 5000;
 
-app.use(cors());
+app.use(cors(
+    {
+        origin:{"https://deploy-mern-1whq.vercel.app"},
+        methods:{"POST","GET"},
+        credentials:true
+    }
+));
 app.use(express.json());
 
 const uri = process.env.MONGO_URI || "mongodb+srv://pratapruhela1922:qwerty1922roundsround@demotour.6duqb.mongodb.net/DemoTour?retryWrites=true&w=majority";

@@ -8,13 +8,15 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = 5000;
+// Configure CORS to allow your frontend
 const corsOptions = {
-  origin: 'https://holomad-frontend.vercel.app', // Your frontend URL
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // If you're using cookies or authentication
-  optionsSuccessStatus: 204,
+  origin: 'https://holomad-frontend.vercel.app',  // Your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allowed methods
+  credentials: true  // Allow cookies or credentials if needed
 };
 
+// Use CORS middleware with the options defined
+app.use(cors(corsOptions));
 app.use(cors(corsOptions));
 
 app.use(express.json());

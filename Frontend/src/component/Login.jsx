@@ -52,7 +52,7 @@ function Login() {
                     <div className={LoginCSS.input}>
                         <input className={LoginCSS.inputbox}
                             type="text"
-                            placeholder="Username"
+                            placeholder="sachin"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required
